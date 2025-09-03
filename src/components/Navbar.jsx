@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { GiThreeLeaves } from "react-icons/gi";
 
 export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
@@ -8,7 +9,12 @@ export default function Navbar() {
   return (
     <nav className="fixed w-full bg-white shadow-md z-50">
       <div className="container mx-auto flex justify-between items-center p-4">
-        <h1 className="text-2xl font-bold text-green-700">Aswin Homeo Clinic</h1>
+        <h1 className="flex items-center text-2xl font-bold text-green-700 leading-none">
+          <GiThreeLeaves className="mr-2 h-7 w-7" />
+          Aswin Homeo Clinic
+        </h1>
+
+        {/* <h1 className="text-2xl font-bold text-green-700"><GiThreeLeaves className="inline-block"/> Aswin Homeo Clinic</h1> */}
 
         {/* Desktop Nav */}
         <ul className="hidden md:flex space-x-6">
